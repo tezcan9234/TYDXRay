@@ -1,0 +1,10 @@
+import pyvista as pv
+
+# Render işlemi arka planda yapılacak
+pv.set_plot_theme('document')
+plotter = pv.Plotter(off_screen=True)  # off_screen=True, ekranı göstermeden çalışır
+mesh = pv.Cube()  # Basit bir küp
+plotter.add_mesh(mesh, color='cyan')
+
+# Görseli belirli bir klasöre kaydet
+plotter.screenshot('C:/Users/Monster/Desktop/TYDX/saved_images/render_output.png')
